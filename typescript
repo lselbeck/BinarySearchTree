@@ -1,0 +1,104 @@
+Script started on Fri 18 Apr 2014 11:06:01 AM PDT
+lps1994@uw1-320-14:~/CSS343/Lab2$ g++ lab2.cpp bintree.cpp nodedata.cpp
+lps1994@uw1-320-14:~/CSS343/Lab2$ g++ lab2.cpp bintree.cpp nodedata.cpp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvalgrind --leak-check=full ./a.outg++ lab2.cpp bintree.cpp nodedata.cpp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pvalgrind --leak-check=full ./a.out./a.out[K
+==10459== Memcheck, a memory error detector
+==10459== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==10459== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==10459== Command: ./a.out
+==10459== 
+Initial data:
+  iii not tttt eee r not and jj r eee pp r sssss eee not tttt ooo ff m m y z $$ 
+Tree Inorder:
+ and eee ff iii jj m not ooo pp r sssss tttt y z
+                        z
+                    y
+                tttt
+                        sssss
+                    r
+                        pp
+                            ooo
+            not
+                    m
+                jj
+        iii
+                ff
+            eee
+                and
+Retrieve --> and:  found
+Retrieve --> not:  found
+Retrieve --> sss:  not found
+Depth    --> and:  3
+Depth    --> not:  2
+Depth    --> sss:  0
+T == T2?     equal
+T != first?  equal
+T == dup?    equal
+                iii
+                    not
+            tttt
+                    y
+                z
+                    r
+        sssss
+                    pp
+                ooo
+                    jj
+            m
+                    eee
+                ff
+                    and
+---------------------------------------------------------------
+Initial data:
+  b a c b a c $$ 
+Tree Inorder:
+ a b c
+            c
+        b
+            a
+Retrieve --> and:  not found
+Retrieve --> not:  not found
+Retrieve --> sss:  not found
+Depth    --> and:  0
+Depth    --> not:  0
+Depth    --> sss:  0
+T == T2?     equal
+T != first?  not equal
+T == dup?    not equal
+            b
+        c
+            a
+---------------------------------------------------------------
+Initial data:
+  c b a $$ 
+Tree Inorder:
+ a b c
+        c
+            b
+                a
+Retrieve --> and:  not found
+Retrieve --> not:  not found
+Retrieve --> sss:  not found
+Depth    --> and:  0
+Depth    --> not:  0
+Depth    --> sss:  0
+T == T2?     equal
+T != first?  not equal
+T == dup?    not equal
+            c
+        b
+            a
+---------------------------------------------------------------
+Initial data:
+   
+==10459== 
+==10459== HEAP SUMMARY:
+==10459==     in use at exit: 0 bytes in 0 blocks
+==10459==   total heap usage: 262 allocs, 262 frees, 13,537 bytes allocated
+==10459== 
+==10459== All heap blocks were freed -- no leaks are possible
+==10459== 
+==10459== For counts of detected and suppressed errors, rerun with: -v
+==10459== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+lps1994@uw1-320-14:~/CSS343/Lab2$ exit
+
+Script done on Fri 18 Apr 2014 11:06:15 AM PDT
